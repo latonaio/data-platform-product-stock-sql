@@ -4,6 +4,7 @@ CREATE TABLE `data_platform_product_stock_availability_data`
     `Product`                      varchar(40) NOT NULL,
     `Plant`                        varchar(4) NOT NULL,
     `Batch`                        varchar(10) DEFAULT NULL,
+    `BatchValidityEndDate`         date DEFAULT NULL,
     `OrderID`                      int(16) DEFAULT NULL, 
     `OrderItem`                    int(6) DEFAULT NULL, 
     `Project`                      varchar(24) DEFAULT NULL,

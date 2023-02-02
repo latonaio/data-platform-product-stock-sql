@@ -12,6 +12,13 @@ CREATE TABLE `data_platform_product_stock_availability_data`
     `InventorySpecialStockType`    varchar(2) DEFAULT NULL,
     `ProductStockAvailabilityDate` date NOT NULL,
     `AvailableProductStock`        float(15) NOT NULL,
-    PRIMARY KEY (`BusinessPartner`, `Product`, `Plant`, `ProductStockAvailabilityDate`)
+  
+    PRIMARY KEY (`BusinessPartner`, `Product`, `Plant`, `ProductStockAvailabilityDate`),
+    
+    CONSTRAINT `DataPlatformProductStockAvailabilityData_fk` FOREIGN KEY (`BusinessPartner`, `Product`, `Plant`) REFERENCES `data_platform_product_stock_product_stock_data` (`BusinessPartner`, `Product`, `Plant`),
+    CONSTRAINT `DataPlatformProductStockAvailabilityDataBatch_fk` FOREIGN KEY (`BusinessPartner`, `Product`, `Plant`, `Batch`) REFERENCES `data_platform_plant_storage_location_data` (`BusinessPartner`, `Product`, `Plant`, `Batch`),
+    CONSTRAINT `DataPlatformProductStockAvailabilityDataOrderItem_fk` FOREIGN KEY (`OrderID`, `OrderItem`) REFERENCES `data_platform_orders_item_data` (`OrderID`, `OrderItem`),
+    CONSTRAINT `DataPlatformProductStockAvailabilityDataProject_fk` FOREIGN KEY (`Project`) REFERENCES `data_platform_project_project_data` (`Project`)
+
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

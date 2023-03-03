@@ -3,7 +3,7 @@ CREATE TABLE `data_platform_product_stock_product_stock_availability_data`
     `BusinessPartner`              int(12) NOT NULL,
     `Product`                      varchar(40) NOT NULL,
     `Plant`                        varchar(4) NOT NULL,
-    `Batch`                        varchar(10) DEFAULT NULL,
+    `Batch`                        varchar(10) NOT NULL,
     `ProductStockAvailabilityDate` date NOT NULL,
     `OrderID`                      int(16) DEFAULT NULL, 
     `OrderItem`                    int(6) DEFAULT NULL, 

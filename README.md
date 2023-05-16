@@ -10,8 +10,13 @@ https://api.XXXXXXXX.com/api/OP_API_XXXXXXX_XXX/overview
 data-platform-product-stock-sql には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
 * data-platform-product-stock-sql-product-stock-data.sql（データ連携基盤 品目在庫 - 品目在庫データ）
-* data-platform-product-stock-sql-product-stock-by-batch-data.sql（データ連携基盤 品目在庫 - ロット品目在庫データ）
+* data-platform-product-stock-sql-product-stock-by-batch-data.sql（データ連携基盤 品目在庫 - 品目ロット在庫データ）
+* data-platform-product-stock-sql-product-stock-by-storage-bin-data.sql（データ連携基盤 品目在庫 - 品目棚番在庫データ）
+* data-platform-product-stock-sql-product-stock-by-storage-bin-by-batch-data.sqlデータ連携基盤 品目在庫 - 品目棚番ロット在庫データ）
 * data-platform-product-stock-sql-product-stock-availability-data.sql（データ連携基盤 品目在庫 - 品目在庫利用可能性データ）
+* data-platform-product-stock-sql-product-stock-availability-by-batch-data.sql（データ連携基盤 品目在庫 - 品目ロット在庫利用可能性データ）
+* data-platform-product-stock-sql-product-stock-availability-by-storage-bin-data.sql（データ連携基盤 品目在庫 - 品目棚番在庫利用可能性データ）
+* data-platform-product-stock-sql-product-stock-availability-by-storage-bin-by-batch-data.sql（データ連携基盤 品目在庫 - 品目棚番ロット在庫利用可能性データ）
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法
 MySQLのセットアップ / Kubernetesの設定 / 具体的なSQLテーブルの作成方法、については、[mysql-kube](https://github.com/latonaio/mysql-kube)を参照ください。

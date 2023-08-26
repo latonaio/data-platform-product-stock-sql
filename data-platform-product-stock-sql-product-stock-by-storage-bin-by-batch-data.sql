@@ -1,4 +1,4 @@
-CREATE TABLE `data_platform_product_stock_product_stock_by_storage_bin_by_batch_data`
+CREATE TABLE `data_platform_product_stock_by_storage_bin_by_batch_data`
 (
     `Product`                                varchar(40) NOT NULL,
     `BusinessPartner`                        int(12) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `data_platform_product_stock_product_stock_by_storage_bin_by_batch_
     CONSTRAINT `DPFMProductStockByStorageBinByBatchDataStorageBin_fk` FOREIGN KEY (`BusinessPartner`, `Plant`, `StorageLocation`, `StorageBin`) REFERENCES `data_platform_storage_bin_general_data` (`BusinessPartner`, `Plant`, `StorageLocation`, `StorageBin`),
     CONSTRAINT `DPFMProductStockByStorageBinByBatchDataSCRID_fk` FOREIGN KEY (`SupplyChainRelationshipID`, `Buyer`, `Seller`) REFERENCES `data_platform_scr_general_data` (`SupplyChainRelationshipID`, `Buyer`, `Seller`),
     CONSTRAINT `DPFMProductStockByStorageBinByBatchDataSCRDeliveryID_fk` FOREIGN KEY (`SupplyChainRelationshipID`, `SupplyChainRelationshipDeliveryID`, `Buyer`, `Seller`, `DeliverToParty`, `DeliverFromParty`) REFERENCES `data_platform_scr_delivery_relation_data` (`SupplyChainRelationshipID`, `SupplyChainRelationshipDeliveryID`, `Buyer`, `Seller`, `DeliverToParty`, `DeliverFromParty`),
-    CONSTRAINT `DPFMProductStockByStorageBinByBatchDataSCRDeliveryPlantID_fk` FOREIGN KEY (`SupplyChainRelationshipID`, `SupplyChainRelationshipDeliveryID`, `SupplyChainRelationshipDeliveryPlantID`, `Buyer`, `Seller`, `DeliverToParty`, `DeliverFromParty`, `DeliverToPlant`, `DeliverFromPlant`) REFERENCES `data_platform_scr_delivery_relation_data` (`SupplyChainRelationshipID`, `SupplyChainRelationshipDeliveryID`, `SupplyChainRelationshipDeliveryPlantID`, `Buyer`, `Seller`, `DeliverToParty`, `DeliverFromParty`, `DeliverToPlant`, `DeliverFromPlant`)
+    CONSTRAINT `DPFMProductStockByStorageBinByBatchDataSCRDeliveryPlantID_fk` FOREIGN KEY (`SupplyChainRelationshipID`, `SupplyChainRelationshipDeliveryID`, `SupplyChainRelationshipDeliveryPlantID`, `Buyer`, `Seller`, `DeliverToParty`, `DeliverFromParty`, `DeliverToPlant`, `DeliverFromPlant`) REFERENCES `data_platform_scr_delivery_plant_relation_data` (`SupplyChainRelationshipID`, `SupplyChainRelationshipDeliveryID`, `SupplyChainRelationshipDeliveryPlantID`, `Buyer`, `Seller`, `DeliverToParty`, `DeliverFromParty`, `DeliverToPlant`, `DeliverFromPlant`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

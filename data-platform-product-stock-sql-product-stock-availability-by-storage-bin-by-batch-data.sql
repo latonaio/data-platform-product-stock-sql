@@ -1,4 +1,4 @@
-CREATE TABLE `data_platform_product_stock_product_stock_availability_by_storage_bin_by_batch_data`
+-- CREATE TABLE `data_platform_product_stock_product_stock_availability_by_storage_bin_by_batch_data` テーブル名エラー
 (
     `Product`                                varchar(40) NOT NULL,
     `BusinessPartner`                        int(12) NOT NULL,

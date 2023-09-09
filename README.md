@@ -10,6 +10,7 @@ https://api.XXXXXXXX.com/api/OP_API_XXXXXXX_XXX/overview
 data-platform-product-stock-sql には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
 * data-platform-product-stock-sql-product-stock-data.sql（データ連携基盤 品目在庫 - 品目在庫データ）
+* data-platform-product-stock-sql-product-stock-doc-data.sql（データ連携基盤 品目在庫 - 品目在庫文書データ）
 * data-platform-product-stock-sql-product-stock-by-batch-data.sql（データ連携基盤 品目在庫 - 品目ロット在庫データ）
 * data-platform-product-stock-sql-product-stock-by-storage-bin-data.sql（データ連携基盤 品目在庫 - 品目棚番在庫データ）
 * data-platform-product-stock-sql-product-stock-by-storage-bin-by-batch-data.sql（データ連携基盤 品目在庫 - 品目棚番ロット在庫データ）
